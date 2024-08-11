@@ -6,6 +6,7 @@ import WelcomeMessage from './components/WelcomeMessage';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
+import UserProfile from './components/UserProfile';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <WelcomeMessage />
       <Header />
       <MainContent />
+      <UserProfile name ="Banjo" age = "26" bio = "Iam currently a student at Alx"/>
       <Footer />
 
       <h1>Vite + React</h1>
