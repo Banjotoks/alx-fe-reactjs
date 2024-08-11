@@ -25,7 +25,7 @@ function App() {
       <WelcomeMessage />
       <Header />
       <MainContent />
-      <UserProfile name ="Banjo" age = "26" bio = "Iam currently a student at Alx"/>
+      <UserProfile name ="Alice" age = "25" bio = "Loves hiking and photography"/>
       <Footer />
 
       <h1>Vite + React</h1>
