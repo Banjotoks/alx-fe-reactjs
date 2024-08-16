@@ -30,7 +30,7 @@ function App() {
       <MainContent />
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <ProfilePage />
-      <UserContext.Provider userData={userData} />
+      <UserContext.Provider value={userData} />
       <UserContext.Provider />
 
       
