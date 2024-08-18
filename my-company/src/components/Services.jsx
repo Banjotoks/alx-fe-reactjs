@@ -2,7 +2,7 @@ import React from "react";
 
 function Services() {
     return (
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: '20px', color: 'purple' }}>
         <h1>Our Services</h1>
         <ul>
           <li>Technology Consulting</li>
