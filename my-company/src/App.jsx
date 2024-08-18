@@ -1,5 +1,5 @@
 import React from "react";
-import { Browswer Router as Router, Routes and Route } from 'react router dom';
+import { BrowswerRouter as Router, Routes, Route } from 'react router dom';
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
