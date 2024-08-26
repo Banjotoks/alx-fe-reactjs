@@ -2,9 +2,12 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import recipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
+import RecipeDetails from './components/RecipeDetails'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +22,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <Router>
+        <Route path="/" element={<RecipeList />} />
+        <Route path="/add-recipe" element={<AddRecipeForm />} />
+        <Route path="/recipes/:id" element={<RecipeDetails />} />
+      </Router>
 
       <RecipeList />
       <AddRecipeForm />
