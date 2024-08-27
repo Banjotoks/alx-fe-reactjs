@@ -1,17 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import useRecipeStore from "./recipeStore";
 
 const RecipeList = () => {
-    const recipes = useRecipeStore(state => state.recipes);
-    const filterRecipes = useRecipeStore((state) => state.deleteRecipe);
-    const searchTerm = useRecipeStore((state) => state.searchTerm);
+    const recipes = useRecipeStore(state => state.filteredRecipes);
+    const deleteRecipe = useRecipeStore(state => state.deleteRecipe);
+    const filterRecipes = useRecipeStore(state => state.filterRecipes);
+    const searchTerm = useRecipeStore(state => state.searchTerm);
+
+    const [ingredientFilter, setIngredientFilter] = useState('');
+    const [cookingTimeFilter, setCookingTimeFilter] = useState('');
+  
 
     useEffect(() => {
-        ilterRecipes();
-    }, [searchTerm, filterRecipes]);
+        filterRecipes();
+    }, [searchTerm, ingredientFilter, setCookingTimeFilter, filterRecipes]);
 
     return (
         <div>
+         <input
+        type="text"
+        placeholder="Filter by ingredient..."
+        value={ingredientFilter}
+        onChange={(e) => setIngredientFilter(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Max cooking time (mins)"
+        value={cookingTimeFilter}
+        onChange={(e) => setCookingTimeFilter(e.target.value)}
+      />
+   
           {recipes.length > 0 ? (
             recipes.map(recipe => (
               <div key={recipe.id}>
