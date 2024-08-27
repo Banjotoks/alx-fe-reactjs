@@ -19,6 +19,7 @@ const AddRecipeForm = () => {
       addRecipe({ id: Date.now(), title, description });
       setTitle('');
       setDescription('');
+      }
     };
 
     return (
