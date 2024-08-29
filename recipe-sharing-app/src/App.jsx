@@ -8,7 +8,7 @@ import recipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
-import SearchBar from '/components/SearchBar';
+import SearchBar from './components/SearchBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,13 +22,16 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-        <Searchbar />
+
 
       </div>
       <Router>
-        <Route path="/" element={<RecipeList />} />
-        <Route path="/add-recipe" element={<AddRecipeForm />} />
-        <Route path="/recipes/:id" element={<RecipeDetails />} />
+        <SearchBar />
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/add-recipe" element={<AddRecipeForm />} />
+          <Route path="/recipes/:id" element={<RecipeDetails />} />
+        </Routes>
       </Router>
 
       <RecipeList />
