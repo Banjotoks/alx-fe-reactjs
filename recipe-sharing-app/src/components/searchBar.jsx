@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRecipeStore } from './recipeStore';
+import useRecipeStore from './recipeStore';
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -8,7 +8,7 @@ const SearchBar = () => {
   return (
     <input
       type="text"
-      className='search-bar'
+      className='Search-bar'
       placeholder="Search recipes..."
       onChange={(e) => setSearchTerm(e.target.value)}
     />
