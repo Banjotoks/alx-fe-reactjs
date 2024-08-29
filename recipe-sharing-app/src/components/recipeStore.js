@@ -17,6 +17,10 @@ const useRecipeStore = create(set => ({
   filterRecipes: () => set(state => ({
     filteredRecipes: state.recipes.filter(recipe =>
       recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+      (state.ingredientFilter ? recipe.ingredients.includes(state.ingredientFilter) : true) &&
+      (state.cookingTimeFilter ? recipe.cookingTime <= state.cookingTimeFilter : true)
+      
+
     )
   })),
 

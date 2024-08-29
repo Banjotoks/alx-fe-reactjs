@@ -8,6 +8,7 @@ import recipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
+import SearchBar from './components/searchBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,7 @@ function App() {
 
       <RecipeList />
       <AddRecipeForm />
+      <searchbar />
 
       <h1>Vite + React</h1>
       <div className="card">
