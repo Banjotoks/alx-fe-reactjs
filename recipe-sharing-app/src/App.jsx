@@ -34,8 +34,7 @@ function App() {
         </Routes>
       </Router>
 
-      <RecipeList />
-      <AddRecipeForm />
+      
      
       <h1>Vite + React</h1>
       <div className="card">
