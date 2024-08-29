@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
-import SearchBar from './components/SearchBar';
+import searchBar from './components/searchBar';
 
 function App() { 
   const [count, setCount] = useState(0)
@@ -25,7 +25,7 @@ function App() {
 
       </div>
       <Router>
-        
+        <searchBar />
         <Routes>
           <Route path="/" element={<RecipeList />} />
           <Route path="/add-recipe" element={<AddRecipeForm />} />
@@ -33,7 +33,7 @@ function App() {
         </Routes>
       </Router>
 
-      <SearchBar />
+      
 
 
       

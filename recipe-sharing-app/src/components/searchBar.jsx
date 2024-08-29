@@ -1,18 +1,18 @@
 import React from 'react';
 import useRecipeStore from './recipeStore';
-import './SearchBar.css';
+import './searchBar.css';
 
-const SearchBar = () => {
+const searchBar = () => {
   const setSearchTerm = useRecipeStore(state => state.setSearchTerm);
 
   return (
     <input
       type="text"
-      className='Search-bar'
-      placeholder="Search recipes..."
+      className='search-bar'
+      placeholder="search recipes..."
       onChange={(e) => setSearchTerm(e.target.value)}
     />
   );
 };
 
-export default SearchBar;
+export default searchBar;
