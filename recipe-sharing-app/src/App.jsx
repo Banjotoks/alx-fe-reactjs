@@ -8,7 +8,7 @@ import recipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
-import searchBar from './components/searchBar';
+import SearchBar from '/components/SearchBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,7 +22,7 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-        <searchbar />
+        <Searchbar />
 
       </div>
       <Router>
