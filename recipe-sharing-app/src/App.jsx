@@ -25,8 +25,9 @@ function App() {
 
       </div>
       <Router>
-        <SearchBar />
+        
         <Routes>
+        <SearchBar />
           <Route path="/" element={<RecipeList />} />
           <Route path="/add-recipe" element={<AddRecipeForm />} />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
