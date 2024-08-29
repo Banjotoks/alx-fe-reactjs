@@ -1,4 +1,4 @@
-import { useRecipeStore } from './recipeStore';
+import useRecipeStore from './recipeStore';
 import EditRecipeForm from './EditRecipeForm'
 import DeleteRecipeButton from './DeleteRecipeButton';
 
@@ -16,7 +16,7 @@ const RecipeDetails = ({ recipeId }) => {
       <p>{recipe.description}</p>
       <EditRecipeForm />
       <DeleteRecipeButton />
-      {/* Render EditRecipeForm and DeleteRecipeButton here */}
+      
     </div>
   );
 };
