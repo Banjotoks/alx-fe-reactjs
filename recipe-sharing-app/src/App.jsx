@@ -27,12 +27,14 @@ function App() {
       <Router>
         
         <Routes>
-        <SearchBar />
           <Route path="/" element={<RecipeList />} />
           <Route path="/add-recipe" element={<AddRecipeForm />} />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
         </Routes>
       </Router>
+
+      <SearchBar />
+
 
       
      
