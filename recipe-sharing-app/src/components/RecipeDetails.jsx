@@ -1,4 +1,5 @@
-import useRecipeStore from './store/recipeStore';
+import useRecipeStore from './components/store/recipeStore';
+
 import EditRecipeForm from './EditRecipeForm'
 import DeleteRecipeButton from './DeleteRecipeButton';
 
