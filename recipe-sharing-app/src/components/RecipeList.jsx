@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import useRecipeStore from "./recipeStore";
 import useRecipeStore from './store/recipeStore';
 
 const RecipeList = () => {
