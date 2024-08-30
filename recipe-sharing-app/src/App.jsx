@@ -8,6 +8,9 @@ import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
 import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
+
 
 function App() { 
   const [count, setCount] = useState(0)
@@ -30,6 +33,8 @@ function App() {
           <Route path="/" element={<RecipeList />} />
           <Route path="/add-recipe" element={<AddRecipeForm />} />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
+          <Route path="/favorites" element={<FavoritesList />} />
+          <Route path="/recommendations" element={<RecommendationsList />} />
         </Routes>
       </Router>
      
