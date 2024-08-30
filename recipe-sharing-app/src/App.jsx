@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
-import SearchBar from './components/SearchBar';
+import SearchBar from './SearchBar'; 
 
 function App() { 
   const [count, setCount] = useState(0)
@@ -32,11 +32,6 @@ function App() {
           <Route path="/recipes/:id" element={<RecipeDetails />} />
         </Routes>
       </Router>
-
-      
-
-
-      
      
       <h1>Vite + React</h1>
       <div className="card">
