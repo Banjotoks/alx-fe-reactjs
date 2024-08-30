@@ -29,12 +29,13 @@ function App() {
       </div>
       <Router>
       <SearchBar /> 
+      <FavoritesList />
+      <RecommendationsList />
+
         <Routes>
           <Route path="/" element={<RecipeList />} />
           <Route path="/add-recipe" element={<AddRecipeForm />} />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
-          <Route path="/favorites" element={<FavoritesList />} />
-          <Route path="/recommendations" element={<RecommendationsList />} />
         </Routes>
       </Router>
      
