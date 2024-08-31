@@ -1,13 +1,38 @@
 import { create } from 'zustand';
 
 const useRecipeStore = create(set => ({
-  recipes: [],
+  recipes: [
+    {
+      id: 1,
+      title: 'Spaghetti',
+      description: 'Delicious spaghetti with sauce.',
+      ingredients: ['spaghetti', 'sauce', 'Paste'],
+      cookingTime: 30,
+    },
+    {
+      id: 2,
+      title: 'Noodles',
+      description: 'Quick and easy to cook.',
+      ingredients: ['noodles', 'chilli', 'onions', 'chicken'],
+      cookingTime: 10,
+    },
+    {
+      id: 3,
+      title: 'Rice',
+      description: 'rice with stew.',
+      ingredients: ['rice', 'stew', 'pepper'],
+      cookingTime: 45,
+    },
+  ],
   searchTerm: '',
   filteredRecipes: [],
+  ingredientFilter: '',  
+  cookingTimeFilter: null,  
   favorites: [],
   recommendations: [],
 
-  // Action to update the search term and filter recipes based on it
+
+  // Action to update the search term and filter recipes 
   setSearchTerm: (term) => set(state => {
     const filteredRecipes = state.recipes.filter(recipe =>
       recipe.title.toLowerCase().includes(term.toLowerCase())
@@ -15,7 +40,7 @@ const useRecipeStore = create(set => ({
     return { searchTerm: term, filteredRecipes };
   }),
 
-  // Action to filter recipes based on the current search term and other criteria
+  // Action to filter recipes 
   filterRecipes: () => set(state => ({
     filteredRecipes: state.recipes.filter(recipe =>
       recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase()) &&
