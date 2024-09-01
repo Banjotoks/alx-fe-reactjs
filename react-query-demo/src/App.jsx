@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { QueryClient, QueryClientProvider } from 'react-query';
+import PostsComponent from './components/PostsComponent';
+import HomeComponent from './components/HomeComponent';
 
 
 const queryClient = new QueryClient();
@@ -10,8 +12,14 @@ const queryClient = new QueryClient();
 function App() {
   return ( 
     <>
-     <QueryClientProvider client={queryClient}>
+     <div className="App">
+      <h1>Welcome to React Query Demo</h1>
       <PostsComponent />
+      <HomeComponent />
+
+    </div>
+     <QueryClientProvider client={queryClient}>
+      
       </QueryClientProvider>
 
       <div>
@@ -24,9 +32,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+       
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

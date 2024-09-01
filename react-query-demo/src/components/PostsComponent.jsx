@@ -23,6 +23,12 @@ function PostsComponent() {
   return (
     <div>
         <h1>Posts Component</h1>
+        <button onClick={() => refetch()}>Refetch Posts Component</button>
+        <ul>
+            {data.map(post => 
+                <li key={post.id}>{post.title}</li>
+            )}
+        </ul>
         </div>
   )
 }
