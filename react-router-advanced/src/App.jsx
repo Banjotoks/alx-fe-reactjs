@@ -3,9 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import profile from './components/Profile/profile';
-import ProfileDetails from './components/Profile/ProfileDetails';
-import ProfileSettings from './components/Profile/ProfileSettings';
+import Profile from './components/components/profile';
+import ProfileDetails from './components/components/ProfileDetails';
+import ProfileSettings from './components/components/ProfileSettings';
 
 
 function App() {
