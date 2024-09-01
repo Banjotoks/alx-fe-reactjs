@@ -3,18 +3,11 @@ import formikForm from 'formik'
 import *as Yup from Yup;
 
 const validationSchema = Yup.object({
-    username: Yup.string()
-      .required('Username is required')
-      .min(3, 'Username must be at least 3 characters'),
-    
-      email: Yup.string()
-      .email('Invalid email address')
-      .required('Email is required'),
-    
-      password: Yup.string()
-      .required('Password is required')
-      .min(6, 'Password must be at least 6 characters'),
+    username: Yup.string().required('Username is required'),
+    email: Yup.string().required('Email is required').email('Invalid email address'),
+    password: Yup.string().required('Password is required').min(6, 'Password must be at least 6 characters'),
   });
+  
 
 const formikForm = () => {
     return (
