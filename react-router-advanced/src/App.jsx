@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './components/profile/';
 import ProfileDetails from './components/Profile/ProfileDetails';
 import ProfileSettings from './components/Profile/ProfileSettings';
+import BlogPost from './components/BlogPosts';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
           <Route path="/profile" element={<Profile />}>
           <Route path="details" element={<ProfileDetails />} />
           <Route path="settings" element={<ProfileSettings />} />
+
+          <Route path="/post/:postId" element={<BlogPost />} />
             </Route>
           </Routes>
         </Router>
