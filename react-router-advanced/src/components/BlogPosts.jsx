@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 function BlogPost() {
   
-  const { postId } = useParams();
+  const { Id } = useParams();
 
   const mockPosts = {
     1: { title: "First Post", content: "This is the content of the first post." },
@@ -12,7 +12,7 @@ function BlogPost() {
   };
 
 
-  const post = mockPosts[postId];
+  const post = mockPosts[Id];
 
   
   if (!post) {
