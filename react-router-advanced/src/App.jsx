@@ -7,6 +7,7 @@ import Profile from './components/profile/';
 import ProfileDetails from './components/Profile/ProfileDetails';
 import ProfileSettings from './components/Profile/ProfileSettings';
 import BlogPost from './components/BlogPosts';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
 
           <Route path="/blog/:id" element={<BlogPost />} />
           ["/blog/:id"]
+          <ProtectedRoute />
 
             </Route>
           </Routes>
