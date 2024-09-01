@@ -1,5 +1,5 @@
 import React from 'react'
-import { Formik, Form, Field, ErrorMessage } from formik;
+import formikForm from 'formik'
 import *as Yup from Yup;
 
 const validationSchema = Yup.object({
