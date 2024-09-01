@@ -15,9 +15,6 @@ function RegistrationForm() {
         
     }
 
-
-  return (
-
     <form onSubmit={handleSubmit}>
         <div>
             <label>Username</label>
@@ -47,7 +44,7 @@ function RegistrationForm() {
         </div>
 
         </form>
-  );
-}; 
+  
+
 
 export default RegistrationForm
