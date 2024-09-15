@@ -14,7 +14,7 @@ const HomePage = () => {
             <h1 class="text-4xl font-bold text-center mb-8">Recipe-Sharing-Platform</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {recipes.map(recipe => (
-                    <div key={recipe.id} className="bg-white rounded-lg shadow-md p-4">
+                    <div key={recipe.id} className="bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 tensition-transform duration-300 p-4">
                         <img
                         src={recipe.image}
                         alt={recipe.title}
