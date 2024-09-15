@@ -5,7 +5,7 @@ const HomePage = () => {
     const[recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        setRecipes(recipesData); 
+        setRecipes(recipesData);  
     }, []);
 
 
