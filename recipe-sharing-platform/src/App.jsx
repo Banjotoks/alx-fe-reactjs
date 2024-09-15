@@ -15,9 +15,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recipe/:id" element={<RecipeDetail />} />
-          <div>
-            <AddRecipeForm onAddRecipe={handleAddRecipe} />
-          </div>
+          <Route
+          path='/add-recipe'
+          element={<AddRecipeForm onAddRecipe={handleAddRecipe} />}
+          />
+        
         </Routes>
       </Router>
     );
