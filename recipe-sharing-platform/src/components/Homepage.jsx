@@ -25,7 +25,7 @@ const HomePage = () => {
                         <p className="text-gray-700">{recipe.summary}</p>
                         </div>
 
-                    </div>
+                    </div> 
                 ))}
             </div>
         </div>

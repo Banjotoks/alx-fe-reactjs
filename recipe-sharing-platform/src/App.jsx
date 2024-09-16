@@ -8,7 +8,7 @@ function App() {
   const [recipes, setRecipes] = useState([]);
 
   const handleAddRecipe = (newRecipe) => {
-    setRecipes([...recipes, newRecipe]);
+    setRecipes([...recipes, newRecipe]); 
   };
     return (
       <Router>
