@@ -17,7 +17,7 @@ function App() {
           <Route path="/recipe/:id" element={<RecipeDetail />} />
           <Route
           path='/add-recipe'
-          element={<AddRecipeForm onAddRecipe={handleAddRecipe} />}
+          element={<AddRecipeForm onAddRecipe={handleAddRecipe} />} 
           />
         
         </Routes>
