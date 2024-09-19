@@ -6,14 +6,14 @@ function Search() {
     const [username, setUsername] = useState('');
     const navigate = useNavigate();
     const [userData, setUserData] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const handleInputChage = (e) => {
         setUsername(e.target.value);
     };
 
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         if (username.trim()) {
             navigate('/user/${username}');
@@ -21,7 +21,7 @@ function Search() {
             setError(null);
             setUserData(null);
             try{
-                const data = fetchUserData(username)
+                const data = await fetchUserData(username)
                 setUserData(data);
             } catch (err) {
                 setError('looks like we cant find the user');
