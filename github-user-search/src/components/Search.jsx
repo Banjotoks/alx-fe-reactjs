@@ -47,8 +47,8 @@ function Search() {
         {error && <p>{error}</p>}
         {userData && (
             <div>
-                <h3>{userData.name}</h3>
-                <img src={userData.avatar_url} alt={`${userData.name}'s avatar`} width='150' />
+                <h3>{userData.login}</h3>
+                <img src={userData.avatar_url} alt={`${userData.login}'s avatar`} width='150' />
                 <p>{userData.bio}</p>
                 <a href={userData.html_url} target='_blank' rel='noopener noreferrer'>
                     Visit Github Profile
