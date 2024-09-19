@@ -4,19 +4,19 @@ import { fetchUserData } from '../services/githubService';
 
 function Search() {
     const [username, setUsername] = useState('');
-    const navigate = useNavigate();
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
-    const handleInputChage = (e) => {
+    const handleInputChange = (e) => {
         setUsername(e.target.value);
     };
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         if (username.trim()) {
-            navigate('/user/${username}');
+            navigate(`/user/${username}`);
             setLoading(true);
             setError(null);
             setUserData(null);
@@ -39,11 +39,11 @@ function Search() {
             type='text'
             placeholder='Enter Github Username'
             value={username}
-            onChange={handleInputChage} 
+            onChange={handleInputChange} 
             />
             <button type='submit'>Search</button>
         </form>
-        {loading && <p>Loading...</p>}
+        {loading && <p>Loading...</p>} 
         {error && <p>{error}</p>}
         {userData && (
             <div>
