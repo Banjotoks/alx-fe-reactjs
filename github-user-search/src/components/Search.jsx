@@ -5,7 +5,7 @@ import { fetchUserData } from '../services/githubService';
 function Search() {
     const [username, setUsername] = useState('');
     const [location, setLocation] = useState('');
-    const [minimumRepos, setMinimumRepos] = useState('');
+    const [minimumRepos, setMinRepos] = useState('');
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ function Search() {
     const handleInputChange = (e) => {
         if (e.target.name === 'username') setUsername(e.target.value);
         if (e.target.name === 'location') setLocation(e.target.value);
-        if (e.target.name === 'minimumRepos') setMinimumRepos(e.target.value);
+        if (e.target.name === 'minRepos') setMinRepos(e.target.value);
     };
 
     const handleFormSubmit = async (e) => {
@@ -29,7 +29,7 @@ function Search() {
             setCurrentPage(1);
 
             try{
-                const data = await fetchUserData(username, location, minimumRepos)
+                const data = await fetchUserData(username, location, minRepos)
                 setUserData(data.items || []);
                 setTotalCount(data.total_count);
             } catch (err) {
@@ -44,7 +44,7 @@ function Search() {
         const nextPage = currentPage + 1;
         setLoading(true);
         try{
-            const data = await fetchUserData(username, location, minimumRepos)
+            const data = await fetchUserData(username, location, minRepos)
             setUserData(prevData => [...prevData, ...data.items]);
             setCurrentPage(nextPage);
         } catch (err) {
@@ -83,7 +83,7 @@ function Search() {
             <div>
             <input
             type='number'
-            name='minimumRepos'
+            name='minRepos'
             placeholder='Minimum Repositories (optional)'
             value={minimumRepos}
             onChange={handleInputChange}
