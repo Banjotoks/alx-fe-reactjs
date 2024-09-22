@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 
-function Home() {
+function Home() { 
   return (
     <div>
       <Search />
